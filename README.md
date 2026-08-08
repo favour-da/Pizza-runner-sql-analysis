@@ -30,6 +30,6 @@ Pizza_Runner/
 └── A8.png
 ├── A9.png
 ├── A10.png
-Runner`
+Runner
 ├── A7.png
 └── A8.png
