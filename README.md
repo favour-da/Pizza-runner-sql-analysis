@@ -1,63 +1,27 @@
 #  Pizza Runner — 8 Week SQL Challenge
 A SQL case study solving Danny Ma's Pizza Runner challenge — covering data cleaning, pizza metrics, runner/customer experience, ingredient optimisation, pricing, and ratings. Written and tested in MySQL Workbench.
 
-## 📌 Overview
+## Overview
 - **Tool used:** MySQL Workbench
 - **Dataset:** 6 tables — `runners`, `customer_orders`, `runner_orders`, `pizza_names`, 
   `pizza_recipes`, `pizza_toppings`
 - ** Question Sections:** Pizza Metrics, Runner & Customer Experience, Ingredient Optimisation, 
   Pricing & Ratings, Bonus DML Challenge
 
-## Repository Structure
-queries/
-├── 01_create_tables.sql
-├── 02_insert_tables.sql
-├── 03_data_cleaning.sql
-├── 04_pizza_metrics.sql
-├── 05_runner_and_customer_experience.sql
-└── 06_ingredient_optimisation.sql
-├── 07_pricing_and_rating.sql
-├── 08_bonus_question.sql
-screenshots/
-Pizza_Runner/
-├── A1.png
-├── A2.png
-├── A3.png
-└── A4.png
-├── A5.png
-├── A6.png
-├── A7.png
-└── A8.png
-├── A9.png
-├── A10.png
-Runner_customer_experience/
-├── B1.png
-└── B2.png
-├── B3.png
-├── B4.png
-├── B5.png
-└── B6.png
-├── B7.png
-ingredient_optimization/
-├── C1.png
-├── C2.png
-└── C3.png
-├── C4.png
-├── C5.png
-├── C6.png
-pricing_and_ratings
-├── D1.png
-└── D2.png
-├── D3.png
-├── D4.png
+## Setup
+Before running any analysis, the database schema and raw data need to be created:
 
+- [Create Tables](./Queries/create_tables.sql) — creates all 6 tables 
+  (`runners`, `customer_orders`, `runner_orders`, `pizza_names`, `pizza_recipes`, `pizza_toppings`)
+- [Insert Table](./Queries/insert_tables.sql) — loads the raw sample data into each table
+  
 ## 🧹 Data Cleaning
 The raw `customer_orders` and `runner_orders` tables had inconsistent null values (blank strings, `'null'`, `'NaN'`) and messy text in `distance`, `duration`, and `pickup_time` (e.g. `"20km"`, `"32 minutes"`). I also found and corrected a data 
 entry error where three `pickup_time` values were logged in 2020 instead of 2021, which made no sense since pickup can't happen before the order was placed.
 
 ## A. Pizza Metrics
 
-Queries: [04_pizza_metrics.sql](./queries/04_pizza_metrics.sql)
+Queries: [04_pizza_metrics.sql](./Queries/04_pizza_metrics.sql)
 
 **A1. How many pizzas were ordered?**
 ![A1](./screenshots/Pizza_Runner/A1.png)
@@ -66,28 +30,28 @@ Queries: [04_pizza_metrics.sql](./queries/04_pizza_metrics.sql)
 ![A2](./screenshots/Pizza_Runner/A2.png)
 
 **A3. How many successful orders were delivered by each runner?**
-![A3](./screenshots/A3_delivered_per_runner.png)
+![A3](./screenshots/Pizza_Runner/A3.png)
 
 **A4. How many of each type of pizza was delivered?**
-![A4](./screenshots/A4_pizza_type_delivered.png)
+![A4](./screenshots/Pizza_Runner/A4.png)
 
 **A5. How many Vegetarian and Meatlovers were ordered by each customer?**
-![A5](./screenshots/A5_pizza_by_customer.png)
+![A5](./screenshots/Pizza_Runner/A5.png)
 
 **A6. What was the maximum number of pizzas delivered in a single order?**
-![A6](./screenshots/A6_max_pizzas_single_order.png)
+![A6](./screenshots/Pizza_Runner/A6.png)
 
 **A7. For each customer, how many delivered pizzas had at least 1 change and how many had no changes?**
-![A7](./screenshots/A7_changes_per_customer.png)
+![A7](./screenshots/Pizza_Runner/A7.png)
 
 **A8. How many pizzas were delivered that had both exclusions and extras?**
-![A8](./screenshots/A8_both_exclusions_extras.png)
+![A8](./screenshots/Pizza_Runner/A8.png)
 
 **A9. What was the total volume of pizzas ordered for each hour of the day?**
-![A9](./screenshots/A9_volume_by_hour.png)
+![A9](./screenshots/Pizza_Runner/A9.png)
 
 **A10. What was the volume of orders for each day of the week?**
-![A10](./screenshots/A10_volume_by_day.png)
+![A10](./screenshots/Pizza_Runner/A10.png)
 
 ---
 
