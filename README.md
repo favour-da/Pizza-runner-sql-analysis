@@ -15,7 +15,7 @@ Before running any analysis, the database schema and raw data need to be created
   (`runners`, `customer_orders`, `runner_orders`, `pizza_names`, `pizza_recipes`, `pizza_toppings`)
 - [Insert Table](./Queries/02_insert_tables.sql) — loads the raw sample data into each table
   
-## 🧹 Data Cleaning
+## Data Cleaning
 The raw `customer_orders` and `runner_orders` tables had inconsistent null values (blank strings, `'null'`, `'NaN'`) and messy text in `distance`, `duration`, and `pickup_time` (e.g. `"20km"`, `"32 minutes"`). I also found and corrected a data 
 entry error where three `pickup_time` values were logged in 2020 instead of 2021, which made no sense since pickup can't happen before the order was placed.
 
@@ -140,10 +140,9 @@ Queries: [Pricing_and_Ratings](./Queries/07_pricing_and_ratings.sql)
 Queries: [Bonus Question](./Queries/08_bonus_questions.sql)
 
 **E1. If Danny wants to expand the pizza range — how does this affect the data design, and what does the INSERT for a "Supreme" pizza look like?**
-![E1](./Queries/08_bonus_questions.sql)
+![E1](./screenshots/E1.png)
 
-## 🔑 Key Learnings
-
+## Key Learnings
 - Handling inconsistent null representations (`''`, `'null'`, `'NaN'`) in raw data
 - Identifying and correcting a real data entry error (wrong year in timestamps)
 - MySQL restriction: a `TEMPORARY` table cannot be referenced twice in the same query — 
