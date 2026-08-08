@@ -19,7 +19,17 @@ queries/
 ├── 07_pricing_and_rating.sql
 ├── 08_bonus_question.sql
 screenshots/
-├── 03_data_cleaning.sql
-├── 04_pizza_metrics.sql
-├── 05_runner_and_customer_experience.sql
-└── 06_ingredient_optimisation
+Pizza_Runner/
+├── A1.png
+├── A2.png
+├── A3.png
+└── A4.png
+├── A5.png
+├── A6.png
+├── A7.png
+└── A8.png
+├── A9.png
+├── A10.png
+Runner`
+├── A7.png
+└── A8.png
